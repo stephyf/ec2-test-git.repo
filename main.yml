@@ -1,0 +1,11 @@
+---
+- name: "Simple Site Hosting"
+  hosts: amazon
+  become: true
+  vars_files: 
+    - variables.yml
+  tasks:
+    - name: "Installing apache server"
+      yum:
+        name: "httpd"
+        state: present
