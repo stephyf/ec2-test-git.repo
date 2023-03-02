@@ -9,3 +9,7 @@
       yum:
         name: "httpd"
         state: present
+    - name: "Creating httpd.conf template"
+      template:
+        src: ./httpd.conf.j2
+        dest: /etc/httpd/conf/httpd.conf
