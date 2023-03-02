@@ -1,2 +1,4 @@
 owner: apache
 group: apache
+port: 8080
+domain: mysite.indiantechie.online

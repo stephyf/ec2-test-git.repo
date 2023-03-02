@@ -13,3 +13,17 @@
       template:
         src: ./httpd.conf.j2
         dest: /etc/httpd/conf/httpd.conf
+    - name: "Creating virtual host"
+      template:
+        src: "./virtualhost.conf.j2"
+        dest: "/etc/httpd/conf.d/{{domain}}.conf"
+        owner: "{{owner}}"
+        group: "{{group}}"
+    - name: "Creating Sample page"
+      copy:
+        src: "{{item}}"
+        dest: "/var/www/html/{{domain}}/"
+        owner: "{{owner}}"
+        group: "{{group}}"
+      with_items:
+        - test.html
