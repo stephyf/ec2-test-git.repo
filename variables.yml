@@ -2,3 +2,5 @@ owner: apache
 group: apache
 port: 8080
 domain: blog.indiantechie.online
+mariadb_root_pass: mysqlroot123
+
