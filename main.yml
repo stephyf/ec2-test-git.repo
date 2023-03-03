@@ -42,3 +42,7 @@
         name: 
           - mariadb-server
         state: present
+    - name: "Restarting mariadb"
+      service:
+        name: mariadb
+        state: restarted
