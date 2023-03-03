@@ -27,9 +27,13 @@
         group: "{{group}}"
       with_items:
         - test.html
+        - test.php
     - name: "Restarting apache service"
       service:
         name: httpd
         state: restarted
         enabled: true
-
+    - name: "Innstalling PHP"
+      yum:
+        name: "php"
+        state: present
