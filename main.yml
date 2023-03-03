@@ -37,3 +37,8 @@
       yum:
         name: "php"
         state: present
+    - name: "Wordpress installation"
+      get_url:
+        url: "{{ wp_url }}"
+        dest: "/tmp/wordpress.tar.gz"
+
