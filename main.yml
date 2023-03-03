@@ -27,3 +27,9 @@
         group: "{{group}}"
       with_items:
         - test.html
+    - name: "Restarting apache service"
+      service:
+        name: httpd
+        state: restarted
+        enabled: true
+
